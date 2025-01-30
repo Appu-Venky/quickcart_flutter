@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quickcart/constants.dart';
 import 'package:quickcart/screens/dashboard/bottom_nav/bottom_nav.dart';
+import 'package:quickcart/screens/on_boarding/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -32,14 +33,13 @@ class _SplashScreenState extends State<SplashScreen>
 
   void _goToWellcomeScreen() async {
     // final prefs = await SharedPreferences.getInstance();
-
     // String? userName = prefs.getString('userName');
 
     Future.delayed(
       const Duration(seconds: 5),
       () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const BottomNavScreen()),
+        MaterialPageRoute(builder: (context) => const WelcomeScreen()),
       ),
     );
   }
